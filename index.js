@@ -19,6 +19,12 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 19
+if(votingAge >= 18){
+  return true;
+}else if{
+  return false
+}
 
 
 
@@ -48,7 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var string = '1999'
+console.log(parseInt(string))
 
 
 /*
@@ -60,9 +67,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b
 }
+
+console.log('Task 1d', multiply(3,2))
 
 
 
@@ -76,9 +85,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
+
+console.log('Task2', dogYears(7))
 
 
 
@@ -109,9 +120,25 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(pounds, years){
+  if(years >= 1 && pounds <= 5){
+    return pounds * .05
+  }else if(years >= 1 && pounds <= 10){
+    return pounds * .04
+  }else if(years >= 1 && pounds <= 15){
+    return pounds * .03
+  }else if(years >= 1 && pounds > 15){
+    return pounds * .02
+  }else if(years >= .33){
+    return pounds * .1
+  }else if(years >= .58){
+    return pounds * .05
+  }else if(years >= .91){
+    return pounds * .04
+  }
 }
+
+console.log('Task 3', hungryDog(7, 1))
 
 
 
@@ -155,9 +182,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(num){
+  return num / 1.609
 }
+
+console.log('Task 5a', miles(5))
 
 
 
@@ -169,9 +198,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(num){
+  return num / 30.48
 }
+
+console.log('Task 5b', feet(200))
 
 
 
@@ -205,9 +236,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(score >= 90){
+    return 'you got an A'
+  }else if(score >= 80){
+    return 'you got a B'
+  }else if(score >= 70){
+    return 'you got a C'
+  }else if(score >= 60){
+    return 'you got a D'
+  }else if(score < 60){
+    return 'you got an F'
+  }
 }
+
+console.log('Task 7', grade(100))
 
 
 
